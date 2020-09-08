@@ -14,12 +14,25 @@
 
 """
 
+def busy_by_age(age):
+    if age < 6:
+        return 'Детский сад'
+    elif 6 <= age <=17:
+        return 'Школа'
+    elif 17 < age <= 24:
+        return 'ВУЗ'
+    else:
+        return 'Работа'
+
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    age = int(input('Введите возраст: '))
+    busy = busy_by_age(age)
+    print(busy)
 
 if __name__ == "__main__":
     main()
