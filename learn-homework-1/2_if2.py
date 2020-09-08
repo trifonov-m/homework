@@ -14,13 +14,29 @@
   и выводя на экран результаты
 
 """
+def checkstr(str1, str2):
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        return 0
+    elif str1 == str2:
+        return 1
+    elif len(str1) > len(str2):
+        return 2
+    elif str2 == 'learn':
+        return 3
 
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
-    
+
+    a = '1'
+    b = 'learn'
+    print(checkstr(a, b))
+    """
+    Поварьировал значения, есть случаи, когда возвращает только None, что,
+    в принципе, было видно из условия задачи
+    """
+
 if __name__ == "__main__":
     main()
