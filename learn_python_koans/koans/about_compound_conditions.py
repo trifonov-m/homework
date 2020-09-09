@@ -7,7 +7,7 @@ def test_and_returns_one_of_the_operands():
         значение, а значение одного из операндов.
     """
     r = 'a' and 'b'
-    assert r == _____  # попробуйте такие варианты: True, False, 'a', 'b'
+    assert r == True  # попробуйте такие варианты: True, False, 'a', 'b'
 
 
 def test_or_returns_one_of_the_operands():
