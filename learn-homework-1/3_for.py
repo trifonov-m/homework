@@ -25,9 +25,12 @@ def main():
     num_marks = 0
     for klass in classes_list:
         sum_class_scores = 0
-        for mark in klass['scores']:
-            sum_class_scores += mark
-            klass['average_mark'] = sum_class_scores / len(klass['scores'])
+        # можно сумму считать сразу без применения for с помощью оператора sum():
+        # sum(klass['scores'])
+        #for mark in klass['scores']:
+        #   sum_class_scores += mark
+        sum_class_scores = sum(klass['scores'])
+        klass['average_mark'] = sum_class_scores / len(klass['scores'])
         sum_school_mark += sum_class_scores
         num_marks += len(klass['scores'])
     average_school_mark = sum_school_mark / num_marks
