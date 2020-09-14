@@ -50,8 +50,8 @@ def planet_sozv(update, context):
     d = datetime.datetime.now()
     date = d
 #    date = d.strftime("%Y/%m/%d")
-    if user_text == 'Jupiter':
-        planet = ephem.Jupiter(date) 
+ #   if hasattr(ephem, user_text):
+    planet = getattr(ephem, user_text)(date)
     update.message.reply_text(ephem.constellation(planet))
     
 
