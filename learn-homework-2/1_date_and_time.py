@@ -32,7 +32,7 @@ def str_2_datetime(date_string):
     В ней надо заменить pass на ваш код
     """
     date_dt = datetime.strptime(date_string, "%m/%d/%y %H:%M:%S.%f")
-    print(date_dt)
+    return date_dt
 
 
 if __name__ == "__main__":
